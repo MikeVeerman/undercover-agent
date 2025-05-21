@@ -11,7 +11,7 @@ But, what if we could generate these tests instead of dedicating development cap
 
 LLMs can write test automation. That's not new. But telling Cursor to write a test for a component we just created takes almost as long as writing the test ourselves. It still requires a human developer. The performance gains are minimal.
 
-What I am interested in is asking it to write all the missing tests for a codebase!
+What I am interested in is asking it to write **all the missing tests** for a codebase!
 
 Automated tests execute parts of the codebase and check whether they behave as expected. If a codebase has 100 lines of code and our test suite executes 40 of those, we say the code has 40% code coverage. Most modern programming environments allow us to generate reports showing us which lines of code have been tested and, more importantly, which lines have not.
 
