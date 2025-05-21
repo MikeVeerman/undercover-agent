@@ -1,4 +1,4 @@
-![Undercover Agent Logo](img/logo.png)
+<img src="img/logo.png" alt="Undercover Agent Logo" width="700px">
 
 # Undercover agent
 > **Let's have AI agents write the tests our engineers didn't have the time for.**
