@@ -1,7 +1,7 @@
 ![Undercover Agent Logo](img/logo.png)
 
 # Undercover agent
-> **Let's have AI agents write the tests our engineers didn't have the time to write.**
+> **Let's have AI agents write the tests our engineers didn't have the time for.**
 
 Software developers know they should write unit tests. Shipping features, however, always seems more important. Over time, technical debt creeps in, and by the time we want to pay it back, we really, really wish we had those tests.
 
