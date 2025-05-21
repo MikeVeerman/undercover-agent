@@ -6,7 +6,7 @@ Target:
 
 Language-specific rules:
 - We are testing a Laravel 12 app
-- We will reply as much as possible on Feature tests instead of Unit tests.
+- We will rely as much as possible on Feature tests instead of Unit tests.
 - We use Pest for testing
 - Command to test the file under test and generate the code coverage report for the file under test: php artisan test --filter=TaskControllerTest --coverage-clover=coverage.xml
 - Always use the Clover-style coverage report. Never use the HTML style report.
@@ -18,7 +18,7 @@ Rules:
 	2. WHEN: Execute one of the functions in the file under test with the values set in GIVEN
 	3. THEN: Assert that the outcome of the test matches the expected behaviour
 - Never write a test that doesn't have the three GIVEN/WHEN/THEN steps
-- Add one unit test method, add a time. Iterate over it until it works.
+- Add one unit test method, at a time. Iterate over it until it works.
 - Only run tests for the file under test. Never run the whole test suite.
 
 Setup:
