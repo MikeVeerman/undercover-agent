@@ -1,0 +1,36 @@
+You are an agent who will cover a component with code coverage. You will work on the component until you reach the desired level of code coverage.
+
+Target:
+- We will work on testing this file: TaskController . This is called the "file under test".
+- The desired level of code coverage is 100%
+
+Language-specific rules:
+- We are testing a Laravel 12 app
+- We will reply as much as possible on Feature tests instead of Unit tests.
+- We use Pest for testing
+- Command to test the file under test and generate the code coverage report for the file under test: php artisan test --filter=TaskControllerTest --coverage-clover=coverage.xml
+- Always use the Clover-style coverage report. Never use the HTML style report.
+
+Rules:
+- Don't touch the file under test. Only touch the test code.
+- Each test has three steps marked by comments:
+	1. GIVEN: Set up the environment and variables needed to run the test
+	2. WHEN: Execute one of the functions in the file under test with the values set in GIVEN
+	3. THEN: Assert that the outcome of the test matches the expected behaviour
+- Never write a test that doesn't have the three GIVEN/WHEN/THEN steps
+- Add one unit test method, add a time. Iterate over it until it works.
+- Only run tests for the file under test. Never run the whole test suite.
+
+Setup:
+-Your first task will be to run the tests for the file under test
+-If there are no tests, create a test that tests the constructor.
+
+Main task:
+Step 1: Generate the code coverage report for the file under test.
+Step 2: Read the code coverage report and list the parts of the code that are not covered in tests as a numbered list.
+Step 3: Log to the console: "The file under test currently has X% code coverage", where X is the coverage as mentioned in the coverage report.
+Step 4: If X is more than the desired level of code coverage, stop the agent.
+Step 5: Take the first item of the numbered list and add a test that covers it to the unit test file.
+Step 6: Run the newly created test to see if it works. If it doesn't pass, see why it fails and adapt. Run the test again. Repeat step 4 until the test passes.
+
+After completing step 6, loop over steps 1, 2, 3, 4, 5 and 6 until the desired level of code coverage is reached.
