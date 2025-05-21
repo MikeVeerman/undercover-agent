@@ -20,9 +20,13 @@ Undercover Agent is an experiment to figure out if we can get our favourite AI C
 ## Usage
 Feed the prompt found in `src/cover_one_file.prompt` into your favourite agent framework. I ran the experiment with [Cursor](https://cursor.sh), [Junie](https://www.jetbrains.com/junie/), [Codex](https://github.com/openai/codex) and [Claude Code](https://claude.ai).
 
+Some helpful insights and lessons learned can be found [here](/LessonsLearned.md).
 ## Help wanted
 For now, it's just a prompt and a set of articles. But if enough people chip in, we might build the tool that can help us fight technical debt on all legacy code bases.
 
 So, try running the prompt over your own code bases and add your experiences to this repository. 
 
 Let's take code coverage to 100%.
+
+## Learn more
+For more details about the original experiment and its results, check out [this article](https://somethingwithai.substack.com/p/from-0-to-319-in-25-minutes-and-263).
