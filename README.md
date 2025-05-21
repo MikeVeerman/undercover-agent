@@ -18,7 +18,7 @@ Automated tests execute parts of the codebase and check whether they behave as e
 Undercover Agent is an experiment to figure out if we can get our favourite AI Code Agents to write the tests for us.
 
 ## Usage
-Feed the prompt found in `src/cover_one_file.prompt` into your favourite agent framework. I ran the experiment with Cursor, Junie, Codex and Claude Code.
+Feed the prompt found in `src/cover_one_file.prompt` into your favourite agent framework. I ran the experiment with [Cursor](https://cursor.sh), [Junie](https://www.jetbrains.com/junie/), [Codex](https://github.com/openai/codex) and [Claude Code](https://claude.ai).
 
 ## Help wanted
 For now, it's just a prompt and a set of articles. But if enough people chip in, we might build the tool that can help us fight technical debt on all legacy code bases.
