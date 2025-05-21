@@ -29,7 +29,7 @@ Main task:
 Step 1: Generate the code coverage report for the file under test.
 Step 2: Read the code coverage report and list the parts of the code that are not covered in tests as a numbered list.
 Step 3: Log to the console: "The file under test currently has X% code coverage", where X is the coverage as mentioned in the coverage report.
-Step 4: If X is more than the desired level of code coverage, stop the agent.
+Step 4: If X is equal or higher than the desired level of code coverage, stop the agent.
 Step 5: Take the first item of the numbered list and add a test that covers it to the unit test file.
 Step 6: Run the newly created test to see if it works. If it doesn't pass, see why it fails and adapt. Run the test again. Repeat step 4 until the test passes.
 
