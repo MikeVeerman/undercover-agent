@@ -18,7 +18,17 @@ Automated tests execute parts of the codebase and check whether they behave as e
 Undercover Agent is an experiment to figure out if we can get our favourite AI Code Agents to write the tests for us.
 
 ## Usage
-Feed the prompt found in `src/cover_one_file.prompt` into your favourite agent framework. I ran the experiment with [Cursor](https://cursor.sh), [Junie](https://www.jetbrains.com/junie/), [Codex](https://github.com/openai/codex) and [Claude Code](https://claude.ai).
+To generate tests for a single class, feed the prompt found in `src/cover_one_file.prompt` into your favourite agent framework. I ran the experiment with [Cursor](https://cursor.sh), [Junie](https://www.jetbrains.com/junie/), [Codex](https://github.com/openai/codex) and [Claude Code](https://claude.ai). Claude Code by far has the best results in my experience.
+
+To generate tests for multiple classes using Claude Code, use the script in `src/undercover-agent.py` like this:
+
+- make sure Python >3.12 and Claude Code are installed
+- copy the script into the codebase you want to cover
+- create a file called `.undercover-agent/input.txt`
+- fill `input.txt` with the relative paths of the files you want to cover. One file per row. (Tip: you can ask Claude Code to do this for you) 
+- execute the script bby running `python undercover-agent.py`
+
+The script will read the first line from `input.txt` and generate test code for that file. After that, it will remove the processed file from `input.txt` and take the next one.
 
 Some helpful insights and lessons learned can be found [here](/LessonsLearned.md).
 ## Help wanted
