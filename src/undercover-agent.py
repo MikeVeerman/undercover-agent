@@ -77,7 +77,7 @@ def processFile(filepath):
 
         timed_out = False
         start_time = time.time()
-        timeout_seconds = 180  # 3 minutes
+        timeout_seconds = 1800  # 30 minutes timeout. If it takes longer than half an hour to get the tests working, skip it
 
         try:
             while process.poll() is None:
