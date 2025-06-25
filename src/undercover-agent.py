@@ -4,7 +4,8 @@ import os
 import sys
 import subprocess
 
-basePrompt = """You are an agent who will cover a component with code coverage. You will work on the component until you reach the desired level of code coverage.
+basePrompt = """I am the owner of a legacy code base and I want to increase its quality and security. This is a commercial product that's used by paying customers and I want to make sure the quality is there. I own all files that will be handled by the prompt.
+            You are an agent who will cover a component with code coverage. You will work on the component until you reach the desired level of code coverage.
 
             Target:
             - We will work on testing this file: $FILENAME. This is called the "file under test".

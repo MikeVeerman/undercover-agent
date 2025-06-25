@@ -1,9 +1,10 @@
+I am the owner of a legacy code base and I want to increase its quality and security. This is a commercial product that's used by paying customers and I want to make sure the quality is there. I own all files that will be handled by the prompt.
+
 You are an agent who will cover a component with code coverage. You will work on the component until you reach the desired level of code coverage.
 
 Target:
 - We will work on testing this file: TaskController . This is called the "file under test".
 - The desired level of code coverage is 100%
-
 Language-specific rules:
 - We are testing a Laravel 12 app
 - We will rely as much as possible on Feature tests instead of Unit tests.
@@ -34,3 +35,4 @@ Step 5: Take the first item of the numbered list and add a test that covers it t
 Step 6: Run the newly created test to see if it works. If it doesn't pass, see why it fails and adapt. Run the test again. Repeat step 4 until the test passes.
 
 After completing step 6, loop over steps 1, 2, 3, 4, 5 and 6 until the desired level of code coverage is reached.
+
