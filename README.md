@@ -24,11 +24,13 @@ To generate tests for multiple classes using Claude Code, use the script in `src
 
 - make sure Python >3.12 and Claude Code are installed
 - copy the script into the codebase you want to cover
-- create a file called `.undercover-agent/input.txt`
-- fill `input.txt` with the relative paths of the files you want to cover. One file per row. (Tip: you can ask Claude Code to do this for you) 
-- execute the script bby running `python undercover-agent.py`
+- scaffold a config for your test framework: `python undercover-agent.py --init <preset>` (presets: `vitest`, `jest`, `pytest`, `pest`, `cargo`). This writes `.undercover-agent/config.json`; review `test_command` and `coverage_report` so they match how your project runs coverage.
+- fill `.undercover-agent/input.txt` with the relative paths of the files you want to cover, one per row. (Tip: you can ask Claude Code to do this for you.)
+- execute the script by running `python undercover-agent.py`
 
-The script will read the first line from `input.txt` and generate test code for that file. After that, it will remove the processed file from `input.txt` and take the next one.
+The script reads the first line from `input.txt`, generates test code for that file, then moves it out of `input.txt` (to `processed.txt`, `timedout.txt`, or `failed.txt`) and takes the next one. Failures stay queued for a plain re-run.
+
+The framework was originally hard-wired to Laravel/Pest; it now comes from `.undercover-agent/config.json`, so the same loop covers any stack that can emit a coverage report. Run `python undercover-agent.py --list-presets` to see the built-ins.
 
 Some helpful insights and lessons learned can be found [here](/LessonsLearned.md).
 ## Help wanted
