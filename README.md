@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> When this repo was created, getting to 100% or even 70% code coverage was genuinely hard for agents. Today, it's a solved problem. This repo is no longer maintained.
+
 <img src="img/logo.png" alt="Undercover Agent Logo" width="700px">
 
 # Undercover agent
